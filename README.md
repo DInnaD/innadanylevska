@@ -1,11 +1,12 @@
 # innadanylevska
+jQuery
 The site is published at https://dinnad.github.io/innadanylevska/
 index.html https://github.com/DInnaD/innadanylevska/blob/master/index.html
 style.css https://github.com/DInnaD/innadanylevska/blob/master/css/style.css
 script.js https://github.com/DInnaD/innadanylevska/blob/master/js/script.js
 Description:
 
-It will be a very useful & universal book
+It will be a very useful & universal book with jQuery
 
 Which takes data in three ways:
 
