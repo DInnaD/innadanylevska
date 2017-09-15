@@ -1,11 +1,13 @@
 # innadanylevska
 jQuery
+
 The site is published at https://dinnad.github.io/igeneralbook/
 index.html https://github.com/DInnaD/innadanylevska/blob/master/index.html
 style.css https://github.com/DInnaD/innadanylevska/blob/master/css/style.css
 script.js https://github.com/DInnaD/innadanylevska/blob/master/js/script.js
 
 chornovyk https://github.com/DInnaD/igeneralbook/blob/master/index.html
+
 Description:
 
 It will be a very useful & universal book with jQuery
