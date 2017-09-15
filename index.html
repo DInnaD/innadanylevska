@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>iGeneral Book</title><!-- jQuery mobile, jQuery UI, custom stylesheets -->
+	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" rel="stylesheet"><!--link rel="stylesheet" href="css/style.css"-->
+	<!-- jQuery, jQuery UI, jQuery mobile, custom scripts -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
+	</script>
+	<script src="js/script.js">
+	</script><!--script>
+            $(function(){
+                $('.date').each(function(){
+                    $(this).datepicker();
+                });
+            });
+        </script-->
+</head>
+<body>
+	<div id="mymap" style="position: absolute !important; top: 0px; background-color: none !important;"></div>
+	<div class="ui-mobile-viewport ui-overlay-a" id="contactform" style=" overflow: none !important;">
+		<div class="brand">
+			<a href="#" id="toggler" style="color: #42DCA3;" title="Click what to do"><i aria-hidden="true" class="fa fa-info-circle" style="35px !important;"></i></a>
+			<h1>General Book</h1>
+		</div><!--"brand"-->
+		<div id="box" style="display: none; text-align: center; position: relative;">
+			<h5></h5>
+			<p style="color: #fff !important; font-size: 0.8em;">Instruction<br></p>
+		</div><!-- #home Page -->
+		<div data-role="page" id="home" style="position: relative !important; background-color: none !important!;">
+			<header data-role="header" data-theme="b"></header>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" data-transition="none" href="#home"></a>
+					</li>
+					<li>
+						<a data-icon="plus" data-transition="none" href="#add"></a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<ul data-filter="true" data-filter-placeholder="Search.." data-inset="true" data-role="listview" id="stats"></ul><br>
+				<button data-theme="b" id="clearContacts" onclick="return confirm('Are You Sure?')">Clear iGeneralBook</button><br>
+				<!--button id="compareContacts" onclick="return confirm('Are You Sure delete contact with the same phone data?')" data-theme="b">Clear the same contact</button-->
+			</div>
+			<footer data-role="footer" data-theme="b" id="footer">
+				<h4>iGeneral Book 2017</h4>
+			</footer>
+		</div><!-- ADD PAGE -->
+		<div data-role="page" id="add" style="position: relative !important; background-color: none !important!;">
+			<header data-role="header" data-theme="b"></header>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" data-transition="none" href="#home"></a>
+					</li>
+					<li>
+						<a data-icon="plus" data-transition="none" href="#add"></a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<p>Add Contact</p>
+				<form id="addForm" name="addForm">
+					<label for="addName"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" id="addName" placeholder="Enter Name" required="required" type="text">
+					</div><label for="addPhone"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" data-role="phone" id="addPhone" pattern="^\+38-\d{10}$" placeholder="Enter Phone" required="required" type="tel">
+					</div><label for="addUrl"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" id="addUrl" pattern="^\https://\d{1000}$" placeholder="Enter Url" required="required" type="text">
+					</div><label for="addInfo"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" data-role="info" id="addInfo" placeholder="Enter Info" type="text">
+					</div><button id="submitAdd">Submit</button>
+				</form>
+			</div>
+			<footer data-role="footer" data-theme="b">
+				<h4>iGeneral Book 2017</h4>
+			</footer>
+		</div><!-- EDIT PAGE -->
+		<div data-role="page" id="edit" style="position: relative !important;">
+			<header data-role="header" data-theme="b"></header>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a data-icon="home" data-transition="none" href="#home"></a>
+					</li>
+					<li>
+						<a data-icon="plus" data-transition="none" href="#add"></a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<p>Edit Contact</p>
+				<form id="editForm" name="editForm">
+					<label for="editName"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" id="editName" placeholder="Enter Name" required="required" type="text">
+					</div><label for="editPhone"></label><!--pattern="^\+380-\d{3}-\d{2}-\d{2}$" pattern="^\+38-\d{10}$" pattern="^\https://\d{1000}$"-->
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" data-role="phone" id="editPhone" pattern="^\+38-\d{10}$" placeholder="+38-1234567890" required="required" type="tel">
+					</div><label for="editUrl"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" id="editUrl" placeholder="Enter Url" required="required" type="text">
+					</div><label for="editInfo"></label>
+					<div class="ui-btn ui-btn-b ui-corder-all">
+						<input class="signupForm form-field" data-role="info" id="editInfo" placeholder="Enter Info" type="text">
+					</div><button id="submitEdit">Update</button>
+				</form>
+			</div>
+			<footer data-role="footer" data-theme="b">
+				<h4>iGeneral Book 2017</h4>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
